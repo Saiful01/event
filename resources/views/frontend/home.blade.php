@@ -30,7 +30,8 @@
     <!-- spacing css -->
     <link rel="stylesheet" type="text/css" href="/assets/css/rs-spacing.css">
     <!-- style css -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css"> <!-- This stylesheet dynamically changed from style.less -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <!-- This stylesheet dynamically changed from style.less -->
     <!-- responsive css -->
     <link rel="stylesheet" type="text/css" href="/assets/css/responsive.css">
 
@@ -45,6 +46,7 @@
             margin: 0px 0px 92px 0px;
 
         }
+
         .rs-banner.main-home .content-wrap .conference-title {
             position: relative;
             z-index: 2;
@@ -56,29 +58,27 @@
             color: #ffffff;
             margin: 0px 0px 80px 0px;
         }
-        .rs-newsletter.style1 .newsletter-wrap {
-            bottom: 0px;
-            padding: 0px 0px !important;
-            background-color: #1a0d86;
-            border-radius: 5px;
-            position: absolute;
-            width: 100% !important;
-            text-align: center !important;
-        }
-        #demo{
-            color: white;
-            font-size: 30px;
-            z-index: 3;
-        }
-        .rs-footer.style1 .footer-top {
-            padding: 50px 0 95px;
-        }
-        @media only screen and (max-width: 600px) {
-            #demo{
 
-                font-size: 20px;
+
+        .rs-timecoun-ceremony {
+
+            bottom: 0px;
+            position: absolute;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+
+        }
+
+        .university-name {
+            margin-top: 230px;
+        }
+        @media screen and (max-width: 600px) {
+            .university-name {
+                margin-top: 0px;
             }
         }
+
+
     </style>
 
 </head>
@@ -102,7 +102,7 @@
     <!--Full width header Start-->
     <div class="full-width-header">
         <!--Header Start-->
-        <header id="rs-header" class="rs-header header-transparent" >
+        <header id="rs-header" class="rs-header header-transparent">
             <!-- Menu Start -->
             <div class="menu-area menu-sticky">
                 <div class="container">
@@ -259,7 +259,7 @@
                             <li class="last-item menu-item-has-children">
                                 <a href="#">Schedule</a>
                                 <ul class="sub-menu">
-                                    <li><a href="schedule-light.html">Schedule Light</a> </li>
+                                    <li><a href="schedule-light.html">Schedule Light</a></li>
                                     <li><a href="Schedule-dark.html">Schedule Dark</a></li>
                                 </ul>
                             </li>
@@ -327,9 +327,11 @@
                 </div>
                 <h5 class="conference-title">“Advancements in Pharmaceuticals and Health
                     Sciences for Sustainable Development”</h5>
-                <h5 class="text-white"><img src="/assets/images/event.png" alt="" width="30px"> 10–11 OCTOBER 2024</h5>
-                <h5 class="text-white"><img src="/assets/images/contact/icons/1.png" alt="" width="30px"> University of Asia Pacific</h5>
-                <h5 class="text-white"><img src="/assets/images/contact/icons/1.png" alt="" width="30px"> Dhaka, Bangladesh</h5>
+                <h5 class="text-white university-name"><img src="/assets/images/event.png" alt="" width="30px"> 10–11 OCTOBER 2024</h5>
+                <h5 class="text-white "><img src="/assets/images/contact/icons/1.png" alt="" width="30px"> University of
+                    Asia Pacific</h5>
+                <h5 class="text-white"><img src="/assets/images/contact/icons/1.png" alt="" width="30px"> Dhaka,
+                    Bangladesh</h5>
 
 
                 <div class="btn-part " style="margin-top: 80px">
@@ -344,6 +346,26 @@
     <!-- Banner Section End -->
 
 
+    <!-- Timecoun Soon Start Here -->
+    <div class="rs-timecoun-ceremony " >
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="banner-counter5">
+                        <div class="timecounter-inner">
+                            <div class="coming-soon-part">
+                                <div class="coming-soon-text">
+                                    <div data-animation-in="slideInLeft" data-animation-out="animate-out fadeOut"
+                                         class="CountDownTimer" data-date="10/11/2024 09:00"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Timecoun Soon End Here -->
     <!-- About Section Start -->
     <div class="rs-about main-home bg3 pt-120 pb-120 md-pt-80 md-pb-80">
         <div class="container">
@@ -359,7 +381,9 @@
 
                         <div class="heading-border-line left-style"></div>
                         <p class="desc margin-0 pt-40 pb-25">
-                            Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+                            Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque
+                            laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi
+                            architecto beatae vitae dicta sunt, explicabo.
                         </p>
 
                     </div>
@@ -382,7 +406,9 @@
 
                         <div class="heading-border-line left-style"></div>
                         <p class="desc margin-0 pt-40 pb-25">
-                            Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+                            Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque
+                            laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi
+                            architecto beatae vitae dicta sunt, explicabo.
                         </p>
 
                     </div>
@@ -395,9 +421,6 @@
         </div>
     </div>
     <!-- About Section End -->
-
-
-
 
 
     <!-- Our Event Schedule Start -->
@@ -416,13 +439,16 @@
                         <!-- Nav tabs -->
                         <ul class="nav eventday-list">
                             <li class="nav-item">
-                                <a class="nav-link active" data-bs-toggle="tab" href="#sunday">Day 1 <span>2022-03-13</span></a>
+                                <a class="nav-link active" data-bs-toggle="tab" href="#sunday">Day 1
+                                    <span>2022-03-13</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#monday">Day 2 <span>2022-03-14</span></a>
+                                <a class="nav-link" data-bs-toggle="tab" href="#monday">Day 2
+                                    <span>2022-03-14</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#tuesday">Day 3 <span>2022-03-14</span></a>
+                                <a class="nav-link" data-bs-toggle="tab" href="#tuesday">Day 3
+                                    <span>2022-03-14</span></a>
                             </li>
                         </ul>
                         <div class="events-schedule-contents tab-content schedule-one">
@@ -431,21 +457,24 @@
                                     <div class="events-items col-lg-6">
                                         <div class="event-author">
                                             <div class="event-shedule-info">
-                                                <h3 class="event-title" >  Introduction Business</h3>
-                                                <p>The decade that brought us Star Trek and Doctor Who also resurrected Cicero or at least what used to be</p>
+                                                <h3 class="event-title"> Introduction Business</h3>
+                                                <p>The decade that brought us Star Trek and Doctor Who also resurrected
+                                                    Cicero or at least what used to be</p>
                                                 <ul class="meta-date-room">
-                                                    <li> <i class="fa fa-clock-o"></i>10:00-12:00</li>
-                                                    <li> <i class="fa fa-user-o"></i>Room#2</li>
+                                                    <li><i class="fa fa-clock-o"></i>10:00-12:00</li>
+                                                    <li><i class="fa fa-user-o"></i>Room#2</li>
                                                 </ul>
                                             </div>
                                             <div class="speak-image-btm">
                                                 <div class="speak-image">
-                                                    <div class="tooltip"><a href="#"><img src="/assets/images/tab/1.jpg" alt="Images"></a>
+                                                    <div class="tooltip"><a href="#"><img src="/assets/images/tab/1.jpg"
+                                                                                          alt="Images"></a>
                                                         <span class="tooltiptext">Allu Arjun</span>
                                                     </div>
                                                 </div>
                                                 <div class="speak-image">
-                                                    <div class="tooltip"><a href="#"><img src="/assets/images/tab/2.jpg" alt="Images"></a>
+                                                    <div class="tooltip"><a href="#"><img src="/assets/images/tab/2.jpg"
+                                                                                          alt="Images"></a>
                                                         <span class="tooltiptext">Odette Annable</span>
                                                     </div>
                                                 </div>
@@ -456,20 +485,23 @@
                                         <div class="event-author">
                                             <div class="event-shedule-info">
                                                 <h3 class="event-title">Digital Marketing Theory</h3>
-                                                <p>The decade that brought us Star Trek and Doctor Who also resurrected Cicero or at least what used to be</p>
+                                                <p>The decade that brought us Star Trek and Doctor Who also resurrected
+                                                    Cicero or at least what used to be</p>
                                                 <ul class="meta-date-room">
-                                                    <li> <i class="fa fa-clock-o"></i>12:00-2:00</li>
-                                                    <li> <i class="fa fa-user-o"></i>Room#2</li>
+                                                    <li><i class="fa fa-clock-o"></i>12:00-2:00</li>
+                                                    <li><i class="fa fa-user-o"></i>Room#2</li>
                                                 </ul>
                                             </div>
                                             <div class="speak-image-btm">
                                                 <div class="speak-image">
-                                                    <div class="tooltip"><a href="#"><img src="/assets/images/tab/3.jpg" alt="Images"></a>
+                                                    <div class="tooltip"><a href="#"><img src="/assets/images/tab/3.jpg"
+                                                                                          alt="Images"></a>
                                                         <span class="tooltiptext">Tiger Shroff</span>
                                                     </div>
                                                 </div>
                                                 <div class="speak-image">
-                                                    <div class="tooltip"><a href="#"><img src="/assets/images/tab/4.jpg" alt="Images"></a>
+                                                    <div class="tooltip"><a href="#"><img src="/assets/images/tab/4.jpg"
+                                                                                          alt="Images"></a>
                                                         <span class="tooltiptext">Dakota Fanning</span>
                                                     </div>
                                                 </div>
@@ -480,10 +512,11 @@
                                         <div class="event-author">
                                             <div class="event-shedule-info">
                                                 <h3 class="event-title">Lunch Break</h3>
-                                                <p>The decade that brought us Star Trek and Doctor Who also resurrected Cicero or at least what used to be</p>
+                                                <p>The decade that brought us Star Trek and Doctor Who also resurrected
+                                                    Cicero or at least what used to be</p>
                                                 <ul class="meta-date-room">
-                                                    <li> <i class="fa fa-clock-o"></i>2:00-3:00</li>
-                                                    <li> <i class="fa fa-user-o"></i>Room#2</li>
+                                                    <li><i class="fa fa-clock-o"></i>2:00-3:00</li>
+                                                    <li><i class="fa fa-user-o"></i>Room#2</li>
                                                 </ul>
                                             </div>
                                             <div class="speak-image-btm">
@@ -499,20 +532,23 @@
                                         <div class="event-author">
                                             <div class="event-shedule-info">
                                                 <h3 class="event-title">Marketing Workshop</h3>
-                                                <p>The decade that brought us Star Trek and Doctor Who also resurrected Cicero or at least what used to be</p>
+                                                <p>The decade that brought us Star Trek and Doctor Who also resurrected
+                                                    Cicero or at least what used to be</p>
                                                 <ul class="meta-date-room">
-                                                    <li> <i class="fa fa-clock-o"></i>3:00-5:00</li>
-                                                    <li> <i class="fa fa-user-o"></i>Room#2</li>
+                                                    <li><i class="fa fa-clock-o"></i>3:00-5:00</li>
+                                                    <li><i class="fa fa-user-o"></i>Room#2</li>
                                                 </ul>
                                             </div>
                                             <div class="speak-image-btm">
                                                 <div class="speak-image">
-                                                    <div class="tooltip"><a href="#"><img src="/assets/images/tab/6.jpg" alt="Images"></a>
+                                                    <div class="tooltip"><a href="#"><img src="/assets/images/tab/6.jpg"
+                                                                                          alt="Images"></a>
                                                         <span class="tooltiptext">Mila Kunis</span>
                                                     </div>
                                                 </div>
                                                 <div class="speak-image">
-                                                    <div class="tooltip"><a href="#"><img src="/assets/images/tab/7.jpg" alt="Images"></a>
+                                                    <div class="tooltip"><a href="#"><img src="/assets/images/tab/7.jpg"
+                                                                                          alt="Images"></a>
                                                         <span class="tooltiptext">Angelina Jolie</span>
                                                     </div>
                                                 </div>
@@ -527,20 +563,23 @@
                                         <div class="event-author">
                                             <div class="event-shedule-info">
                                                 <h3 class="event-title">Marketing Workshop</h3>
-                                                <p>The decade that brought us Star Trek and Doctor Who also resurrected Cicero or at least what used to be</p>
+                                                <p>The decade that brought us Star Trek and Doctor Who also resurrected
+                                                    Cicero or at least what used to be</p>
                                                 <ul class="meta-date-room">
-                                                    <li> <i class="fa fa-clock-o"></i>10:12-5:00</li>
-                                                    <li> <i class="fa fa-user-o"></i>Room#2</li>
+                                                    <li><i class="fa fa-clock-o"></i>10:12-5:00</li>
+                                                    <li><i class="fa fa-user-o"></i>Room#2</li>
                                                 </ul>
                                             </div>
                                             <div class="speak-image-btm">
                                                 <div class="speak-image">
-                                                    <div class="tooltip"><a href="#"><img src="/assets/images/tab/4.jpg" alt="Images"></a>
+                                                    <div class="tooltip"><a href="#"><img src="/assets/images/tab/4.jpg"
+                                                                                          alt="Images"></a>
                                                         <span class="tooltiptext">Dakota Fanning</span>
                                                     </div>
                                                 </div>
                                                 <div class="speak-image">
-                                                    <div class="tooltip"><a href="#"><img src="/assets/images/tab/7.jpg" alt="Images"></a>
+                                                    <div class="tooltip"><a href="#"><img src="/assets/images/tab/7.jpg"
+                                                                                          alt="Images"></a>
                                                         <span class="tooltiptext">Angelina Jolie</span>
                                                     </div>
                                                 </div>
@@ -551,10 +590,11 @@
                                         <div class="event-author">
                                             <div class="event-shedule-info">
                                                 <h3 class="event-title">Lunch Break</h3>
-                                                <p>The decade that brought us Star Trek and Doctor Who also resurrected Cicero or at least what used to be</p>
+                                                <p>The decade that brought us Star Trek and Doctor Who also resurrected
+                                                    Cicero or at least what used to be</p>
                                                 <ul class="meta-date-room">
-                                                    <li> <i class="fa fa-clock-o"></i>12:00-1:00</li>
-                                                    <li> <i class="fa fa-user-o"></i>Room#2</li>
+                                                    <li><i class="fa fa-clock-o"></i>12:00-1:00</li>
+                                                    <li><i class="fa fa-user-o"></i>Room#2</li>
                                                 </ul>
                                             </div>
                                             <div class="speak-image-btm">
@@ -570,20 +610,23 @@
                                         <div class="event-author">
                                             <div class="event-shedule-info">
                                                 <h3 class="event-title">Reinventing Experiences</h3>
-                                                <p>The decade that brought us Star Trek and Doctor Who also resurrected Cicero or at least what used to be</p>
+                                                <p>The decade that brought us Star Trek and Doctor Who also resurrected
+                                                    Cicero or at least what used to be</p>
                                                 <ul class="meta-date-room">
-                                                    <li> <i class="fa fa-clock-o"></i>1:00-3:00</li>
-                                                    <li> <i class="fa fa-user-o"></i>Room#2</li>
+                                                    <li><i class="fa fa-clock-o"></i>1:00-3:00</li>
+                                                    <li><i class="fa fa-user-o"></i>Room#2</li>
                                                 </ul>
                                             </div>
                                             <div class="speak-image-btm">
                                                 <div class="speak-image">
-                                                    <div class="tooltip"><a href="#"><img src="/assets/images/tab/6.jpg" alt="Images"></a>
+                                                    <div class="tooltip"><a href="#"><img src="/assets/images/tab/6.jpg"
+                                                                                          alt="Images"></a>
                                                         <span class="tooltiptext">Mila Kunis</span>
                                                     </div>
                                                 </div>
                                                 <div class="speak-image">
-                                                    <div class="tooltip"><a href="#"><img src="/assets/images/tab/1.jpg" alt="Images"></a>
+                                                    <div class="tooltip"><a href="#"><img src="/assets/images/tab/1.jpg"
+                                                                                          alt="Images"></a>
                                                         <span class="tooltiptext">Allu Arjun</span>
                                                     </div>
                                                 </div>
@@ -598,20 +641,23 @@
                                         <div class="event-author">
                                             <div class="event-shedule-info">
                                                 <h3 class="event-title">Cultures of Creativity</h3>
-                                                <p>The decade that brought us Star Trek and Doctor Who also resurrected Cicero or at least what used to be</p>
+                                                <p>The decade that brought us Star Trek and Doctor Who also resurrected
+                                                    Cicero or at least what used to be</p>
                                                 <ul class="meta-date-room">
-                                                    <li> <i class="fa fa-clock-o"></i>12:00-2:00</li>
-                                                    <li> <i class="fa fa-user-o"></i>Room#2</li>
+                                                    <li><i class="fa fa-clock-o"></i>12:00-2:00</li>
+                                                    <li><i class="fa fa-user-o"></i>Room#2</li>
                                                 </ul>
                                             </div>
                                             <div class="speak-image-btm">
                                                 <div class="speak-image">
-                                                    <div class="tooltip"><a href="#"><img src="/assets/images/tab/2.jpg" alt="Images"></a>
+                                                    <div class="tooltip"><a href="#"><img src="/assets/images/tab/2.jpg"
+                                                                                          alt="Images"></a>
                                                         <span class="tooltiptext">Odette Annable</span>
                                                     </div>
                                                 </div>
                                                 <div class="speak-image">
-                                                    <div class="tooltip"><a href="#"><img src="/assets/images/tab/4.jpg" alt="Images"></a>
+                                                    <div class="tooltip"><a href="#"><img src="/assets/images/tab/4.jpg"
+                                                                                          alt="Images"></a>
                                                         <span class="tooltiptext">Dakota Fanning</span>
                                                     </div>
                                                 </div>
@@ -622,10 +668,11 @@
                                         <div class="event-author">
                                             <div class="event-shedule-info">
                                                 <h3 class="event-title">Lunch Break</h3>
-                                                <p>The decade that brought us Star Trek and Doctor Who also resurrected Cicero or at least what used to be</p>
+                                                <p>The decade that brought us Star Trek and Doctor Who also resurrected
+                                                    Cicero or at least what used to be</p>
                                                 <ul class="meta-date-room">
-                                                    <li> <i class="fa fa-clock-o"></i>2:00-3:00</li>
-                                                    <li> <i class="fa fa-user-o"></i>Room#2</li>
+                                                    <li><i class="fa fa-clock-o"></i>2:00-3:00</li>
+                                                    <li><i class="fa fa-user-o"></i>Room#2</li>
                                                 </ul>
                                             </div>
                                             <div class="speak-image-btm">
@@ -641,20 +688,23 @@
                                         <div class="event-author">
                                             <div class="event-shedule-info">
                                                 <h3 class="event-title">Introduction Business</h3>
-                                                <p>The decade that brought us Star Trek and Doctor Who also resurrected Cicero or at least what used to be</p>
+                                                <p>The decade that brought us Star Trek and Doctor Who also resurrected
+                                                    Cicero or at least what used to be</p>
                                                 <ul class="meta-date-room">
-                                                    <li> <i class="fa fa-clock-o"></i>1:00-5:00</li>
-                                                    <li> <i class="fa fa-user-o"></i>Room#2</li>
+                                                    <li><i class="fa fa-clock-o"></i>1:00-5:00</li>
+                                                    <li><i class="fa fa-user-o"></i>Room#2</li>
                                                 </ul>
                                             </div>
                                             <div class="speak-image-btm">
                                                 <div class="speak-image">
-                                                    <div class="tooltip"><a href="#"><img src="/assets/images/tab/7.jpg" alt="Images"></a>
+                                                    <div class="tooltip"><a href="#"><img src="/assets/images/tab/7.jpg"
+                                                                                          alt="Images"></a>
                                                         <span class="tooltiptext">Angelina Jolie</span>
                                                     </div>
                                                 </div>
                                                 <div class="speak-image">
-                                                    <div class="tooltip"><a href="#"><img src="/assets/images/tab/1.jpg" alt="Images"></a>
+                                                    <div class="tooltip"><a href="#"><img src="/assets/images/tab/1.jpg"
+                                                                                          alt="Images"></a>
                                                         <span class="tooltiptext">Allu Arjun</span>
                                                     </div>
                                                 </div>
@@ -684,32 +734,31 @@
             </div>
             <div class="row">
                 @for($i =1; $i <=4 ; $i++)
-                <div class="col-lg-3 col-md-6 mb-35">
-                    <div class="team-item">
-                        <div class="team-inner-wrap">
-                            <div class="images-wrap">
-                                <a href=""><img src="/assets/images/ff.jpg" alt="Team"></a>
-                                <div class="team-content text-center">
-                                    <h3 class="title-name"><a href="">Michel Holding</a></h3>
-                                    <div class="team-title">CEO & Founder</div>
-                                    <ul class="social-icons">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    </ul>
+                    <div class="col-lg-3 col-md-6 mb-35">
+                        <div class="team-item">
+                            <div class="team-inner-wrap">
+                                <div class="images-wrap">
+                                    <a href=""><img src="/assets/images/ff.jpg" alt="Team"></a>
+                                    <div class="team-content text-center">
+                                        <h3 class="title-name"><a href="">Michel Holding</a></h3>
+                                        <div class="team-title">CEO & Founder</div>
+                                        <ul class="social-icons">
+                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 @endfor
 
             </div>
         </div>
     </div>
     <!-- Team Section Start -->
-
 
 
     <!-- Our Sponsor Section Start -->
@@ -802,7 +851,6 @@
     <!-- Our Sponsor Section Start -->
 
 
-
     <!-- Contact Section Start -->
     <div class="rs-contact home-style1 pt-110 pb-120 md-pt-70 md-pb-80">
         <div class="container">
@@ -816,7 +864,8 @@
             <div class="row y-middle">
                 <div class="col-lg-8 pr-50 md-pr-15 md-mb-50">
                     <div class="contact-map">
-                        <iframe src="https://maps.google.com/maps?q=rstheme&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+                        <iframe
+                            src="https://maps.google.com/maps?q=rstheme&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -878,22 +927,6 @@
     </div>
     <!-- Contact Section End -->
 
-    <!-- Newsletter section start -->
-    <div class="rs-newsletter style1 mb--110">
-        <div class="">
-            <div class="newsletter-wrap">
-                <div class="row ">
-
-
-                            <h3 class="newsletter-title" >
-                                <img src="/assets/images/event.png" alt="" width="30px">   <span  id="demo"></span>
-                            </h3>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Newsletter section end -->
 </div>
 <!-- Main content End -->
 
@@ -912,7 +945,8 @@
                         <div class="col-lg-4 col-md-12 col-sm-12 pl-45 md-pl-15">
                             <h3 class="footer-title">Address</h3>
                             <div class="textwidget">2096 New Market, New<br> Road
-                                North Carolina, USA</div>
+                                North Carolina, USA
+                            </div>
                         </div>
                         <div class="col-lg-4 col-md-12 col-sm-12 md-mb-10 pl-90 md-pl-15">
                             <h3 class="footer-title">Call Us</h3>
@@ -1022,7 +1056,7 @@
     var countDownDate = new Date("Dec 31, 2024 23:59:59").getTime();
 
     // Update the countdown every 1 second
-    var x = setInterval(function() {
+    var x = setInterval(function () {
 
         // Get today's date and time
         var now = new Date().getTime();

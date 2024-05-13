@@ -2465,7 +2465,7 @@ body .search-modal .close:hover {
   background-size: cover;
 }*/
 .rs-banner.main-home .content-wrap {
-  padding: 120px 0 290px !important;
+  padding: 221px 0 290px !important;
   text-align: center;
 }
 .rs-banner.main-home .content-wrap .icon-wrap img {
@@ -6517,7 +6517,7 @@ body .search-modal .close:hover {
   height: 100%;
 }
 .rs-timecoun-ceremony .coming-soon-part .coming-soon-text .time_circles {
-  margin-bottom: 25px;
+  margin-bottom: 0px;
 }
 .rs-timecoun-ceremony .coming-soon-part .coming-soon-text .time_circles canvas {
   opacity: 0;

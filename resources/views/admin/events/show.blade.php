@@ -95,6 +95,14 @@
                             @endif
                         </td>
                     </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.event.fields.registration_rules') }}
+                        </th>
+                        <td>
+                            {!! $event->registration_rules !!}
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             <div class="form-group">
