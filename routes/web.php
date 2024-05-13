@@ -2,6 +2,16 @@
 
 /*Route::redirect('/', '/login');*/
 Route::get('/', 'Controller@index')->name('home');
+Route::get('/about/{id}', 'Controller@about')->name('about');
+Route::get('/organization-committee', 'Controller@committee')->name('committee');
+Route::get('/co-host', 'Controller@coHost')->name('coHost');
+Route::get('/speaker', 'Controller@speaker')->name('speaker');
+Route::get('/abstract', 'Controller@abstract')->name('abstract');
+Route::get('/full-paper', 'Controller@fullPaper')->name('fullPaper');
+Route::get('/stall', 'Controller@stall')->name('stall');
+Route::get('/strategic-partner', 'Controller@strategicPartner')->name('strategicPartner');
+Route::get('/venue', 'Controller@venue')->name('venue');
+Route::get('/contact', 'Controller@contact')->name('contact');
 Route::get('/home', function () {
     if (session('status')) {
         return redirect()->route('admin.home')->with('status', session('status'));
