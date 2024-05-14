@@ -16,6 +16,7 @@ class CreateEventsTable extends Migration
             $table->date('start_date');
             $table->string('university')->nullable();
             $table->string('address')->nullable();
+            $table->longText('registration_rules')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

@@ -36,6 +36,7 @@ class Event extends Model implements HasMedia
         'start_date',
         'university',
         'address',
+        'registration_rules',
         'created_at',
         'updated_at',
         'deleted_at',

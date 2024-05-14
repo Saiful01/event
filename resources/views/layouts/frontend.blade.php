@@ -131,10 +131,10 @@
 
 
             .university-name {
-                margin-top: 0px;
+                margin-top: -50px;
             }
             .rs-banner.main-home .content-wrap {
-                padding: -70px 0 20px !important;
+                padding: -60px 0 20px !important;
 
             }
             .counter-div {
@@ -147,10 +147,6 @@
 
             }
 
-            .rs-banner.main-home .content-wrap .conference-title {
-                 font-size: 25px;
-                margin: 150px 0px 80px 0px;
-            }
         }
         @media screen and (min-width: 451px) {
             .et-mobile {

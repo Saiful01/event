@@ -105,6 +105,13 @@ class Controller extends BaseController
         return view('frontend.contact',compact('data'));
 
     }
+    public function registration()
+    {
+
+
+        return view('frontend.registration');
+
+    }
     public function speaker()
     {
 
