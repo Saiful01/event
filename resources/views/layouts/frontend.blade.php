@@ -148,7 +148,7 @@
             }
 
             .rs-banner.main-home .content-wrap .conference-title {
-                font-size: 25px;
+                 font-size: 25px;
                 margin: 150px 0px 80px 0px;
             }
         }
