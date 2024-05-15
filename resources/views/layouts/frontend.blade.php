@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon -->
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/fav.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/UAP_banner.png">
     <!-- Bootstrap v4.4.1 css -->
     <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
     <!-- font-awesome css -->
@@ -56,15 +56,22 @@
             line-height: 32px;
             letter-spacing: 1px;
             color: #ffffff;
-            margin: 0px 0px 80px 0px;
+            margin: -50px 0px 30px 0px;
+        }
+
+
+
+        .rs-footer.style1 .footer-top {
+            padding: 50px 0px 50px;
         }
 
 
 
 
-        .university-name {
+
+     /*   .university-name {
             margin-top: 230px;
-        }
+        }*/
 
 
 
@@ -131,7 +138,7 @@
 
 
             .university-name {
-                margin-top: -50px;
+                margin-top: 0px;
             }
             .rs-banner.main-home .content-wrap {
                 padding: -60px 0 20px !important;
@@ -178,7 +185,7 @@
 <div id="pre-load">
     <div id="loader" class="loader">
         <div class="loader-container">
-            <div class='loader-icon'><img src="/assets/images/fav.png" alt="Evenio - Events & Conference"></div>
+            <div class='loader-icon'><img src="/assets/UAP_banner.png" alt="University Of Asia Pecific"></div>
         </div>
     </div>
 </div>
