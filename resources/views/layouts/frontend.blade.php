@@ -60,13 +60,9 @@
         }
 
 
-
-
         .university-name {
             margin-top: 230px;
         }
-
-
 
 
         .countdown-section {
@@ -76,14 +72,17 @@
             width: 100%;
 
         }
+
         .text-center {
             text-align: center;
         }
+
         .countdown-header {
             font-family: "Montserrat", sans-serif;
             font-size: 1.125rem;
             font-weight: 700;
         }
+
         .counter-div {
             display: flex;
             flex-direction: row;
@@ -91,13 +90,15 @@
             justify-content: center;
             padding: 24px 0;
         }
+
         .counter-element {
             width: fit-content;
             display: flex;
             flex-direction: column;
         }
+
         .number-div {
-            background-color:#FA0368;
+            background-color: #FA0368;
             border-radius: 10px;
             width: 80px;
             padding: 12px 0;
@@ -106,25 +107,31 @@
             font-weight: 700;
             color: white;
         }
+
         .element-text {
             font-family: "Montserrat", sans-serif;
             font-size: 0.75rem;
             font-weight: 700;
             color: white;
         }
+
         .counter-animate {
             animation: slideInFromTop 0.5s ease-in-out;
         }
+
         .show {
             opacity: 1;
         }
+
         @media screen and (max-width: 450px) {
             .number-div {
                 width: 60px;
             }
+
             .counter-div {
                 gap: 5px;
             }
+
             .et-desktop {
                 display: none;
             }
@@ -133,10 +140,12 @@
             .university-name {
                 margin-top: -50px;
             }
+
             .rs-banner.main-home .content-wrap {
                 padding: -60px 0 20px !important;
 
             }
+
             .counter-div {
 
                 padding: 3px 0px 0px 0px;
@@ -148,6 +157,7 @@
             }
 
         }
+
         @media screen and (min-width: 451px) {
             .et-mobile {
                 display: none;
@@ -164,7 +174,6 @@
                 opacity: 1;
             }
         }
-
 
 
     </style>
@@ -341,7 +350,6 @@
             document.getElementById("demo").innerHTML = "EXPIRED";
         }
     }, 1000);
-
 
 
     function timingCalc(endtime) {
