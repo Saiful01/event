@@ -36,23 +36,13 @@
 
                                             </ul>
                                         </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="#">SPEAKER</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="/speaker">Invited guest</a></li>
-                                                <li><a href="/speaker">keynote speaker</a></li>
-                                                <li><a href="/speaker">plenary speaker</a></li>
-                                                <li><a href="/speaker">Invited speaker</a></li>
+                                        <li>
+                                            <a href="/speaker">SPEAKER</a>
 
-
-                                            </ul>
                                         </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="#">SUBMISSION</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="/abstract">Abstract</a></li>
-                                                <li><a href="/full-paper">Full paper</a></li>
-                                            </ul>
+                                        <li>
+                                            <a href="/abstract">SUBMISSION</a>
+
                                         </li>
                                         <li class="menu-item-has-children">
                                             <a href="#">EXHIBITION & SPONSORSHIP</a>
@@ -60,6 +50,9 @@
                                                 <li><a href="/stall">Stall</a></li>
                                                 <li><a href="/strategic-partner">Strategic partner</a></li>
                                             </ul>
+                                        </li>
+                                        <li>
+                                            <a href="/announcement">Announcement</a>
                                         </li>
 
                                         <li>
@@ -157,13 +150,16 @@
                 </li>
 
                 <li>
+                    <a href="/announcement">Announcement</a>
+                </li>
+                <li>
                     <a href="/venue">VENUE</a>
                 </li>
                 <li>
                     <a href="/contact">Contact</a>
                 </li>
             </ul>
-            <div class="canvas-contact">
+            {{--<div class="canvas-contact">
                 <div class="address-area">
                     <div class="address-list">
                         <div class="info-icon">
@@ -193,7 +189,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>--}}
         </nav>
         <!-- Canvas Menu end -->
     </header>

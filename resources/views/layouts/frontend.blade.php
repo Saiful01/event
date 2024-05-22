@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon -->
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/fav.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/UAP_banner.png">
     <!-- Bootstrap v4.4.1 css -->
     <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
     <!-- font-awesome css -->
@@ -56,33 +56,46 @@
             line-height: 32px;
             letter-spacing: 1px;
             color: #ffffff;
-            margin: 0px 0px 80px 0px;
+            margin: -50px 0px 30px 0px;
         }
 
 
-        .university-name {
+        .university-name img {
+            width: 30px;
+        }
+
+
+
+        .rs-footer.style1 .footer-top {
+            padding: 50px 0px 50px;
+        }
+
+
+
+
+
+     /*   .university-name {
             margin-top: 230px;
-        }
+        }*/
+
+
 
 
         .countdown-section {
-            background: rgba(0, 0, 0, 0.5);
+           background-color: #21324d;
             bottom: 0px;
-            position: absolute;
+            position: relative;
             width: 100%;
 
         }
-
         .text-center {
             text-align: center;
         }
-
         .countdown-header {
             font-family: "Montserrat", sans-serif;
             font-size: 1.125rem;
             font-weight: 700;
         }
-
         .counter-div {
             display: flex;
             flex-direction: row;
@@ -90,15 +103,13 @@
             justify-content: center;
             padding: 24px 0;
         }
-
         .counter-element {
             width: fit-content;
             display: flex;
             flex-direction: column;
         }
-
         .number-div {
-            background-color: #FA0368;
+            background-color:#FA0368;
             border-radius: 10px;
             width: 80px;
             padding: 12px 0;
@@ -107,57 +118,81 @@
             font-weight: 700;
             color: white;
         }
-
         .element-text {
             font-family: "Montserrat", sans-serif;
             font-size: 0.75rem;
             font-weight: 700;
             color: white;
         }
-
         .counter-animate {
             animation: slideInFromTop 0.5s ease-in-out;
         }
-
         .show {
             opacity: 1;
         }
+        .desktop-hide {
 
+            display: none;
+        }
         @media screen and (max-width: 450px) {
             .number-div {
                 width: 60px;
             }
-
             .counter-div {
                 gap: 5px;
             }
-
             .et-desktop {
                 display: none;
             }
 
 
             .university-name {
-                margin-top: -50px;
+                margin-top: 0px;
             }
-
             .rs-banner.main-home .content-wrap {
                 padding: -60px 0 20px !important;
 
             }
-
             .counter-div {
+                padding: 20px 0px 0px 0px;
+            }
+            .desktop-hide {
 
-                padding: 3px 0px 0px 0px;
+               display: block;
             }
 
             .rs-banner.main-home .content-wrap .prelements-heading .title-inner .title {
-                font-size: 28px;
+                font-size: 18px;
 
             }
 
-        }
+            .rs-banner.main-home .content-wrap .prelements-heading .title-inner .title {
 
+                line-height: 20px;
+
+            }
+
+            .rs-banner.main-home .content-wrap .conference-title {
+                font-size: 13px;
+                font-weight: 900;
+                line-height: 15px;
+                margin: -68px 0px 15px 0px;
+            }
+
+            h5 {
+                font-size: 13px;
+                line-height: 0px;
+                font-weight: 900;
+            }
+            .university-name img {
+                width: 20px;
+            }
+
+            .readon.btn-text {
+                padding: 5px 10px 5px 10px;
+            }
+
+        }
         @media screen and (min-width: 451px) {
             .et-mobile {
                 display: none;
@@ -176,6 +211,7 @@
         }
 
 
+
     </style>
 
 </head>
@@ -187,7 +223,7 @@
 <div id="pre-load">
     <div id="loader" class="loader">
         <div class="loader-container">
-            <div class='loader-icon'><img src="/assets/images/fav.png" alt="Evenio - Events & Conference"></div>
+            <div class='loader-icon'><img src="/assets/UAP_banner.png" alt="University Of Asia Pecific"></div>
         </div>
     </div>
 </div>
@@ -201,16 +237,16 @@
 
 
 <!-- Footer Start -->
-<footer id="rs-footer" class="rs-footer style1" style="background-color: #0a53be">
+<footer id="rs-footer" class="rs-footer style1" style="background-color: #011A40">
     <div class="footer-top">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-12 col-sm-12 md-mb-10">
+                <div class="col-lg-2 col-md-12 col-sm-12 md-mb-10">
                     <div class="footer-logo mb-40 md-mb-20">
-                        <a href="/"><img src="/assets/images/logo-light2.png" alt=""></a>
+                        <a href="/"><img src="/assets/UAP_banner.png" alt=""></a>
                     </div>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-10">
                     <div class="row">
                         <div class="col-lg-4 col-md-12 col-sm-12 pl-45 md-pl-15">
                             <h3 class="footer-title">Address</h3>
@@ -350,6 +386,7 @@
             document.getElementById("demo").innerHTML = "EXPIRED";
         }
     }, 1000);
+
 
 
     function timingCalc(endtime) {

@@ -8,7 +8,7 @@
 
 
         <!-- Breadcrumbs Start -->
-        <div class="rs-breadcrumbs " style="background-color: #0a53be">
+        <div class="rs-breadcrumbs " style="background-color: #011A40">
             <div class="container">
                 <div class="breadcrumbs-inner">
                     <h1 class="page-title">
@@ -30,7 +30,7 @@
                             <div class="logo-item">
                                 <div class="grid-figure">
                                     <div class="logo-img">
-                                        <a href="{{$stall->link ?? ''}}"><img src="{{$stall->image ?? '/assets/images/event/sponsor/1.png'}}" alt="logo-img"></a>
+                                        <a href="{{$stall->link ?? ''}}" target="_blank"><img src="{{$stall->image->original_url ?? '/assets/images/event/sponsor/1.png'}}" alt="logo-img"></a>
                                     </div>
                                 </div>
                             </div>

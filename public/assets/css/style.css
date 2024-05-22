@@ -1266,7 +1266,7 @@ blockquote cite:before {
   position: relative;
 }
 .sec-title .sub-text {
-  font-size: 15px;
+  font-size: 25px;
   font-weight: 600;
   line-height: 28px;
   text-transform: uppercase;
@@ -1454,7 +1454,7 @@ blockquote cite:before {
 .full-width-header .rs-header .menu-area .rs-menu-area {
   display: flex;
   align-items: center;
-  margin-right: 72px;
+  margin-right: 0px;
 }
 .full-width-header .rs-header .menu-area .main-menu {
   position: unset;
@@ -2365,7 +2365,7 @@ body .search-modal .close:hover {
   background-position: center center !important;
 }
 .rs-breadcrumbs .breadcrumbs-inner {
-  padding: 280px 0 180px;
+    padding: 160px 0 100px;
 }
 .rs-breadcrumbs .breadcrumbs-inner .page-title {
   font-size: 48px;
@@ -4635,7 +4635,7 @@ body .search-modal .close:hover {
   width: 100%;
   bottom: 0;
   position: absolute;
-  padding: 20px 20px;
+  padding: 10px 10px;
   color: #444;
   text-align: center;
   overflow: hidden;

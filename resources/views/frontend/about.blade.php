@@ -10,7 +10,7 @@
 
 
     <!-- Breadcrumbs Start -->
-    <div class="rs-breadcrumbs " style="background-color: #0a53be">
+    <div class="rs-breadcrumbs " style="background-color: #011A40">
         <div class="container">
             <div class="breadcrumbs-inner">
                 <h1 class="page-title">
@@ -26,14 +26,14 @@
         <div class="container">
             <div class="row">
               @if($id == 1)
-                  {!! $data->about_the_conference !!}
+                  {!! $data->about_the_conference ?? '' !!}
                 @elseif($id == 2)
 
-                    {!! $data->scope_of_the_conference !!}
+                    {!! $data->scope_of_the_conference ?? '' !!}
 
                 @elseif($id ==3)
 
-                    {!! $data->program_schedule !!}
+                    {!! $data->program_schedule ?? '' !!}
                 @else
                   <h1 class="text-danger text-center"> No data Found</h1>
 

@@ -11,6 +11,7 @@ Route::get('/full-paper', 'Controller@fullPaper')->name('fullPaper');
 Route::get('/stall', 'Controller@stall')->name('stall');
 Route::get('/strategic-partner', 'Controller@strategicPartner')->name('strategicPartner');
 Route::get('/venue', 'Controller@venue')->name('venue');
+Route::get('/announcement', 'Controller@announcement')->name('announcement');
 Route::get('/contact', 'Controller@contact')->name('contact');
 Route::get('/registration', 'Controller@registration')->name('registration');
 Route::get('/home', function () {

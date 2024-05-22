@@ -10,7 +10,7 @@
 
 
         <!-- Breadcrumbs Start -->
-        <div class="rs-breadcrumbs " style="background-color: #0a53be">
+        <div class="rs-breadcrumbs " style="background-color: #011A40">
             <div class="container">
                 <div class="breadcrumbs-inner">
                     <h1 class="page-title">
@@ -26,14 +26,16 @@
             <div class="container">
                 <div class="row">
 
-                    @if(count($data) > 0 )
+                    @if(count($commitee) > 0 )
+
+                        @foreach($commitee as $data)
 
                         <div class="col-lg-4 col-md-6 mb-30">
                             <div class="team-item">
                                 <div class="team-img">
                                     @if($data->image)
                                         <a href="{{ $data->image->getUrl() }}" target="_blank" >
-                                            <img src="{{ $data->image->getUrl('thumb') }}">
+                                            <img src="{{ $data->image->original_url }}">
                                         </a>
                                     @endif
                                 </div>
@@ -48,6 +50,8 @@
                                 </div>
                             </div>
                         </div>
+
+                        @endforeach
 
 
                     @else

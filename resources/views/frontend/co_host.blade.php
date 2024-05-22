@@ -1,5 +1,3 @@
-
-
 @extends('layouts.frontend')
 @section('content')
 
@@ -10,7 +8,7 @@
 
 
         <!-- Breadcrumbs Start -->
-        <div class="rs-breadcrumbs " style="background-color: #0a53be">
+        <div class="rs-breadcrumbs " style="background-color: #011A40">
             <div class="container">
                 <div class="breadcrumbs-inner">
                     <h1 class="page-title">
@@ -28,27 +26,30 @@
 
                     @if(count($data) > 0 )
 
-                        <div class="col-lg-4 col-md-6 mb-30">
-                            <div class="team-item">
-                                <div class="team-img">
-                                    @if($data->image)
-                                        <a href="{{ $data->image->getUrl() }}" target="_blank" >
-                                            <img src="{{ $data->image->getUrl('thumb') }}">
-                                        </a>
-                                    @endif
-                                </div>
-                                <div class="team-content">
-                                    <div class="team-info">
-                                        <div class="name">
-                                            <a href="">{{$data->name}}</a>
+                        @foreach($data as $item)
+
+                            <div class="col-lg-4 col-md-6 mb-30">
+                                <div class="team-item">
+                                    <div class="team-img">
+                                        @if($item->image)
+                                            <a href="{{ $item->image->getUrl() }}" target="_blank">
+                                                <img src="{{ $item->image->original_url }}">
+                                            </a>
+                                        @endif
+                                    </div>
+                                    <div class="team-content">
+                                        <div class="team-info">
+                                            <div class="name">
+                                                <a href="">{{$item->name}}</a>
+                                            </div>
+
                                         </div>
 
                                     </div>
-
                                 </div>
                             </div>
-                        </div>
 
+                        @endforeach
 
                     @else
 
@@ -116,7 +117,6 @@
                             </div>
                         </div>
 
-
                     @endif
 
                 </div>
@@ -127,6 +127,5 @@
 
     </div>
     <!-- Main content End -->
-
 
 @endsection

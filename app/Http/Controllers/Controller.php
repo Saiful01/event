@@ -37,9 +37,9 @@ class Controller extends BaseController
     {
 
 
-        $data= OrganizationCommittee::get();
+        $commitee= OrganizationCommittee::get();
 
-        return view('frontend.committee',compact('data'));
+        return view('frontend.committee',compact('commitee'));
 
     }
     public function coHost()
@@ -58,6 +58,15 @@ class Controller extends BaseController
         $data= Stall::get();
 
         return view('frontend.stall',compact('data'));
+
+    }
+    public function announcement()
+    {
+
+
+        $data= Stall::get();
+
+        return view('frontend.announcement',compact('data'));
 
     }
     public function strategicPartner()
@@ -117,9 +126,9 @@ class Controller extends BaseController
 
 
         $data1= Speaker::where('category','Invited guest')->get();
-        $data2= Speaker::where('category','keynote guest')->get();
-        $data3= Speaker::where('category','Plenary guest')->get();
-        $data4= Speaker::where('category','Invited guest')->get();
+          $data2= Speaker::where('category','keynote speaker')->get();
+         $data3= Speaker::where('category','Plenary speaker')->get();
+        $data4= Speaker::where('category','Invited speaker')->get();
 
         return view('frontend.speaker',compact('data1','data2','data3','data4'));
 
