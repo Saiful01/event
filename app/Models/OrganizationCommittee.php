@@ -30,6 +30,7 @@ class OrganizationCommittee extends Model implements HasMedia
         'name',
         'designation',
         'details',
+        'category_id',
         'created_at',
         'updated_at',
         'deleted_at',
@@ -56,5 +57,10 @@ class OrganizationCommittee extends Model implements HasMedia
         }
 
         return $file;
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(CommitteeCategory::class, 'category_id');
     }
 }

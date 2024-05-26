@@ -20,13 +20,40 @@
         </div>
 
 
-        <!-- Team Start -->
-        <div id="rs-team" class="rs-team style3 pt-120 pb-120 md-pt-80">
+        <div class="rs-inner-blog pt-120 md-pt-80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="row">
 
+                            @php
+
+                                $blogs= \App\Models\Announcement::OrderBy('created_at', "DESC")->get();
+                            @endphp
+                            @foreach($blogs as $blog)
+                                <div class="col-lg-12 mb-50">
+                                    <div class="blog-item">
+
+                                        <div class="blog-content">
+                                            <h3 class="blog-title"><a href="">{{$blog->title ?? ''}}</a></h3>
+
+                                            <div class="blog-desc">
+                                                {!! $blog->description ?? '' !!}
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            @endforeach
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
 
         </div>
-        <!-- Team end -->
-
 
 
     </div>

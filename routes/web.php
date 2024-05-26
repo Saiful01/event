@@ -14,6 +14,8 @@ Route::get('/venue', 'Controller@venue')->name('venue');
 Route::get('/announcement', 'Controller@announcement')->name('announcement');
 Route::get('/contact', 'Controller@contact')->name('contact');
 Route::get('/registration', 'Controller@registration')->name('registration');
+Route::post('/registration-submit', 'Controller@registrationSave')->name('registration.store');
+Route::post('/abstract-submit', 'Controller@abstractSave')->name('abstract.store');
 Route::get('/home', function () {
     if (session('status')) {
         return redirect()->route('admin.home')->with('status', session('status'));
@@ -112,9 +114,17 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     // Important Dates
     Route::delete('important-dates/destroy', 'ImportantDatesController@massDestroy')->name('important-dates.massDestroy');
-    Route::post('important-dates/media', 'ImportantDatesController@storeMedia')->name('important-dates.storeMedia');
-    Route::post('important-dates/ckmedia', 'ImportantDatesController@storeCKEditorImages')->name('important-dates.storeCKEditorImages');
     Route::resource('important-dates', 'ImportantDatesController');
+
+    // Announcement
+    Route::delete('announcements/destroy', 'AnnouncementController@massDestroy')->name('announcements.massDestroy');
+    Route::post('announcements/media', 'AnnouncementController@storeMedia')->name('announcements.storeMedia');
+    Route::post('announcements/ckmedia', 'AnnouncementController@storeCKEditorImages')->name('announcements.storeCKEditorImages');
+    Route::resource('announcements', 'AnnouncementController');
+
+    // Committee Category
+    Route::delete('committee-categories/destroy', 'CommitteeCategoryController@massDestroy')->name('committee-categories.massDestroy');
+    Route::resource('committee-categories', 'CommitteeCategoryController');
 });
 Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 'middleware' => ['auth']], function () {
     // Change password

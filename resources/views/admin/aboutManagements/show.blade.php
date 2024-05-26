@@ -28,7 +28,7 @@
                             {{ trans('cruds.aboutManagement.fields.welcome_message') }}
                         </th>
                         <td>
-                            {{ $aboutManagement->welcome_message }}
+                            {!! $aboutManagement->welcome_message !!}
                         </td>
                     </tr>
                     <tr>
@@ -36,7 +36,7 @@
                             {{ trans('cruds.aboutManagement.fields.about_text') }}
                         </th>
                         <td>
-                            {{ $aboutManagement->about_text }}
+                            {!! $aboutManagement->about_text !!}
                         </td>
                     </tr>
                     <tr>
@@ -80,11 +80,11 @@
                             {{ trans('cruds.aboutManagement.fields.video') }}
                         </th>
                         <td>
-                            @if($aboutManagement->video)
-                                <a href="{{ $aboutManagement->video->getUrl() }}" target="_blank">
+                            @foreach($aboutManagement->video as $key => $media)
+                                <a href="{{ $media->getUrl() }}" target="_blank">
                                     {{ trans('global.view_file') }}
                                 </a>
-                            @endif
+                            @endforeach
                         </td>
                     </tr>
                 </tbody>

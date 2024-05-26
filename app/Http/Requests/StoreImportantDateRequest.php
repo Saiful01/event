@@ -21,6 +21,10 @@ class StoreImportantDateRequest extends FormRequest
                 'string',
                 'required',
             ],
+            'date' => [
+                'string',
+                'required',
+            ],
         ];
     }
 }

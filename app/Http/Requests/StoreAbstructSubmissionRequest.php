@@ -29,6 +29,9 @@ class StoreAbstructSubmissionRequest extends FormRequest
                 'string',
                 'nullable',
             ],
+            'type' => [
+                'required',
+            ],
         ];
     }
 }

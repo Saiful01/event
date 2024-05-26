@@ -16,6 +16,10 @@ class UpdateAboutManagementRequest extends FormRequest
 
     public function rules()
     {
-        return [];
+        return [
+            'video' => [
+                'array',
+            ],
+        ];
     }
 }

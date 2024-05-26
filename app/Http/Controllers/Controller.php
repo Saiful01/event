@@ -3,8 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\AboutManagement;
+use App\Models\AbstructSubmission;
+use App\Models\Announcement;
 use App\Models\CoHostMalaysium;
+use App\Models\CommitteeCategory;
 use App\Models\OrganizationCommittee;
+use App\Models\Registration;
 use App\Models\Speaker;
 use App\Models\Stall;
 use App\Models\StrategicPartner;
@@ -12,12 +16,53 @@ use App\Models\Submission;
 use App\Models\Venu;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
+use RealRashid\SweetAlert\Facades\Alert;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
 
+    public function registrationSave(Request $request)
+    {
+
+        $registration = Registration::create($request->all());
+
+        if ($request->input('payment_slip', false)) {
+            $registration->addMedia(storage_path('tmp/uploads/' . basename($request->input('payment_slip'))))->toMediaCollection('payment_slip');
+        }
+
+        if ($media = $request->input('ck-media', false)) {
+            Media::whereIn('id', $media)->update(['model_id' => $registration->id]);
+        }
+
+        Alert::success('Success ', 'Your Registration Form is Successfully Done');
+
+
+        return back();
+
+    }
+    public function abstractSave(Request $request)
+    {
+
+        $abstructSubmission = AbstructSubmission::create($request->all());
+
+        if ($request->input('file', false)) {
+            $abstructSubmission->addMedia(storage_path('tmp/uploads/' . basename($request->input('file'))))->toMediaCollection('file');
+        }
+
+        if ($media = $request->input('ck-media', false)) {
+            Media::whereIn('id', $media)->update(['model_id' => $abstructSubmission->id]);
+        }
+
+        Alert::success('Success ', 'Your Submission Form is Successfully Done');
+
+
+        return back();
+
+    }
     public function index()
     {
 
@@ -37,7 +82,7 @@ class Controller extends BaseController
     {
 
 
-        $commitee= OrganizationCommittee::get();
+        $commitee= CommitteeCategory::with('categoryOrganizationCommittees')->get();
 
         return view('frontend.committee',compact('commitee'));
 
@@ -56,15 +101,16 @@ class Controller extends BaseController
 
 
         $data= Stall::get();
+        $sponsor = StrategicPartner::get();
 
-        return view('frontend.stall',compact('data'));
+        return view('frontend.stall',compact('data','sponsor'));
 
     }
     public function announcement()
     {
 
 
-        $data= Stall::get();
+        $data= Announcement::get();
 
         return view('frontend.announcement',compact('data'));
 

@@ -22,7 +22,7 @@
         </div>
 
         <!-- Team Section Start -->
-        <div class="rs-team style1 bg5 pt-110   md-pt-70 md-pb-80">
+        <div id="rs-team" class="rs-team style3 pt-120 md-pt-80">
             <div class="container">
                 <div class="sec-title text-center mb-60">
                     <span class="sub-text">Invited guest</span>
@@ -31,22 +31,23 @@
                 </div>
                 <div class="row">
                    @foreach($data1 as $speaker)
-                        <div class="col-lg-3 col-md-6 mb-35">
+                        <div class="col-lg-3 col-md-6 mb-30">
                             <div class="team-item">
-                                <div class="team-inner-wrap">
-                                    <div class="images-wrap">
-
-                                        @if($speaker->image)
-                                        <a href="{{$speaker->link ?? ''}}" target="_blank">
-                                            <img src="{{$speaker->image->original_url ?? '/assets/images/ff.jpg'}}" alt="Team">
+                                <div class="team-img">
+                                    @if($speaker->image)
+                                        <a href="{{ $speaker->image->getUrl() }}" target="_blank" >
+                                            <img src="{{ $speaker->image->original_url }}">
                                         </a>
-                                        @endif
-                                        <div class="team-content text-center">
-                                            <h3 class="title-name"><a href="{{$speaker->link ?? ''}}" target="_blank">{{$speaker->name ?? ''}}</a></h3>
-                                            <div class="team-title">{{$speaker->designation ?? ''}}</div>
-
+                                    @endif
+                                </div>
+                                <div class="team-content">
+                                    <div class="team-info">
+                                        <div class="name">
+                                            <a href="">{{$speaker->name}}</a>
                                         </div>
+                                        <span class="post">{{$speaker->designation}}</span>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -55,7 +56,7 @@
                 </div>
             </div>
         </div>
-        <div class="rs-team style1 bg5  md-pt-70 md-pb-80">
+        <div  class="rs-team style3  md-pt-80">
             <div class="container">
                 <div class="sec-title text-center mb-60">
                     <span class="sub-text">keynote speaker</span>
@@ -64,22 +65,23 @@
                 </div>
                 <div class="row">
                    @foreach($data2 as $speaker)
-                        <div class="col-lg-3 col-md-6 mb-35">
+                        <div class="col-lg-3 col-md-6 mb-30">
                             <div class="team-item">
-                                <div class="team-inner-wrap">
-                                    <div class="images-wrap">
-
-                                        @if($speaker->image)
-                                            <a href="{{$speaker->link ?? ''}}" target="_blank">
-                                                <img src="{{$speaker->image->original_url ?? '/assets/images/ff.jpg'}}" alt="Team">
-                                            </a>
-                                        @endif
-                                        <div class="team-content text-center">
-                                            <h3 class="title-name"><a href="{{$speaker->link ?? ''}}" target="_blank">{{$speaker->name ?? ''}}</a></h3>
-                                            <div class="team-title">{{$speaker->designation ?? ''}}</div>
-
+                                <div class="team-img">
+                                    @if($speaker->image)
+                                        <a href="{{ $speaker->image->getUrl() }}" target="_blank" >
+                                            <img src="{{ $speaker->image->original_url }}">
+                                        </a>
+                                    @endif
+                                </div>
+                                <div class="team-content">
+                                    <div class="team-info">
+                                        <div class="name">
+                                            <a href="">{{$speaker->name}}</a>
                                         </div>
+                                        <span class="post">{{$speaker->designation}}</span>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -88,7 +90,7 @@
                 </div>
             </div>
         </div>
-        <div class="rs-team style1 bg5  md-pt-70 md-pb-80">
+        <div  class="rs-team style3  md-pt-80">
             <div class="container">
                 <div class="sec-title text-center mb-60">
                     <span class="sub-text">Plenary speaker</span>
@@ -97,22 +99,23 @@
                 </div>
                 <div class="row">
                    @foreach($data3 as $speaker)
-                        <div class="col-lg-3 col-md-6 mb-35">
+                        <div class="col-lg-3 col-md-6 mb-30">
                             <div class="team-item">
-                                <div class="team-inner-wrap">
-                                    <div class="images-wrap">
-
-                                        @if($speaker->image)
-                                            <a href="{{$speaker->link ?? ''}}" target="_blank">
-                                                <img src="{{$speaker->image->original_url ?? '/assets/images/ff.jpg'}}" alt="Team">
-                                            </a>
-                                        @endif
-                                        <div class="team-content text-center">
-                                            <h3 class="title-name"><a href="{{$speaker->link ?? ''}}" target="_blank">{{$speaker->name ?? ''}}</a></h3>
-                                            <div class="team-title">{{$speaker->designation ?? ''}}</div>
-
+                                <div class="team-img">
+                                    @if($speaker->image)
+                                        <a href="{{ $speaker->image->getUrl() }}" target="_blank" >
+                                            <img src="{{ $speaker->image->original_url }}">
+                                        </a>
+                                    @endif
+                                </div>
+                                <div class="team-content">
+                                    <div class="team-info">
+                                        <div class="name">
+                                            <a href="">{{$speaker->name}}</a>
                                         </div>
+                                        <span class="post">{{$speaker->designation}}</span>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -121,7 +124,7 @@
                 </div>
             </div>
         </div>
-        <div class="rs-team style1 bg5  md-pt-70 md-pb-80">
+        <div  class="rs-team style3 pb-120  md-pt-80">
             <div class="container">
                 <div class="sec-title text-center mb-60">
                     <span class="sub-text">Invited speaker</span>
@@ -130,22 +133,23 @@
                 </div>
                 <div class="row">
                    @foreach($data4 as $speaker)
-                        <div class="col-lg-3 col-md-6 mb-35">
+                        <div class="col-lg-3 col-md-6 mb-30">
                             <div class="team-item">
-                                <div class="team-inner-wrap">
-                                    <div class="images-wrap">
-
-                                        @if($speaker->image)
-                                            <a href="{{$speaker->link ?? ''}}" target="_blank">
-                                                <img src="{{$speaker->image->original_url ?? '/assets/images/ff.jpg'}}" alt="Team">
-                                            </a>
-                                        @endif
-                                        <div class="team-content text-center">
-                                            <h3 class="title-name"><a href="{{$speaker->link ?? ''}}" target="_blank">{{$speaker->name ?? ''}}</a></h3>
-                                            <div class="team-title">{{$speaker->designation ?? ''}}</div>
-
+                                <div class="team-img">
+                                    @if($speaker->image)
+                                        <a href="{{ $speaker->image->getUrl() }}" target="_blank" >
+                                            <img src="{{ $speaker->image->original_url }}">
+                                        </a>
+                                    @endif
+                                </div>
+                                <div class="team-content">
+                                    <div class="team-info">
+                                        <div class="name">
+                                            <a href="">{{$speaker->name}}</a>
                                         </div>
+                                        <span class="post">{{$speaker->designation}}</span>
                                     </div>
+
                                 </div>
                             </div>
                         </div>

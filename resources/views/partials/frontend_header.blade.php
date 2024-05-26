@@ -19,10 +19,10 @@
                             <div class="main-menu">
                                 <nav class="rs-menu hidden-md">
                                     <ul class="nav-menu">
-                                        <li class=" current-menu-item">
+                                       {{-- <li class=" current-menu-item">
                                             <a href="/">Home</a>
 
-                                        </li>
+                                        </li>--}}
 
                                         <li class="menu-item-has-children">
                                             <a href="#">About</a>
@@ -33,6 +33,7 @@
                                                 <li><a href="/organization-committee">Organization committee</a></li>
                                                 <li><a href="/about/3">Program schedule</a></li>
                                                 <li><a href="/co-host">Co-host Malaysia</a></li>
+                                                <li><a href="/#important_date">Important Dates</a></li>
 
                                             </ul>
                                         </li>
@@ -44,12 +45,9 @@
                                             <a href="/abstract">SUBMISSION</a>
 
                                         </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="#">EXHIBITION & SPONSORSHIP</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="/stall">Stall</a></li>
-                                                <li><a href="/strategic-partner">Strategic partner</a></li>
-                                            </ul>
+
+                                        <li>
+                                            <a href="/stall">EXHIBITION & SPONSORSHIP</a>
                                         </li>
                                         <li>
                                             <a href="/announcement">Announcement</a>
@@ -106,10 +104,10 @@
                 </a>
             </div>
             <ul class="nav-menu">
-                <li class=" current-menu-item">
-                    <a href="/">Home</a>
+                {{-- <li class=" current-menu-item">
+                     <a href="/">Home</a>
 
-                </li>
+                 </li>--}}
 
                 <li class="menu-item-has-children">
                     <a href="#">About</a>
@@ -120,45 +118,33 @@
                         <li><a href="/organization-committee">Organization committee</a></li>
                         <li><a href="/about/3">Program schedule</a></li>
                         <li><a href="/co-host">Co-host Malaysia</a></li>
+                        <li><a href="/#important_date">Important Dates</a></li>
 
                     </ul>
                 </li>
-                <li class="menu-item-has-children">
-                    <a href="#">SPEAKER</a>
-                    <ul class="sub-menu">
-                        <li><a href="/speaker">Invited guest</a></li>
-                        <li><a href="/speaker">keynote speaker</a></li>
-                        <li><a href="/speaker">plenary speaker</a></li>
-                        <li><a href="/speaker">Invited speaker</a></li>
+                <li>
+                    <a href="/speaker">SPEAKER</a>
 
+                </li>
+                <li>
+                    <a href="/abstract">SUBMISSION</a>
 
-                    </ul>
-                </li>
-                <li class="menu-item-has-children">
-                    <a href="#">SUBMISSION</a>
-                    <ul class="sub-menu">
-                        <li><a href="/abstract">Abstract</a></li>
-                        <li><a href="/full-paper">Full paper</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item-has-children">
-                    <a href="#">EXHIBITION & SPONSORSHIP</a>
-                    <ul class="sub-menu">
-                        <li><a href="/stall">Stall</a></li>
-                        <li><a href="/strategic-partner">Strategic partner</a></li>
-                    </ul>
                 </li>
 
                 <li>
+                    <a href="/stall">EXHIBITION & SPONSORSHIP</a>
+                </li>
+                <li>
                     <a href="/announcement">Announcement</a>
                 </li>
+
                 <li>
                     <a href="/venue">VENUE</a>
                 </li>
                 <li>
                     <a href="/contact">Contact</a>
                 </li>
-            </ul>
+            </ul> <!-- //.nav-menu -->
             {{--<div class="canvas-contact">
                 <div class="address-area">
                     <div class="address-list">

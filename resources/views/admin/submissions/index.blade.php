@@ -26,6 +26,12 @@
                             {{ trans('cruds.submission.fields.id') }}
                         </th>
                         <th>
+                            {{ trans('cruds.submission.fields.absract_file') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.submission.fields.submission_file') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -38,6 +44,20 @@
                             </td>
                             <td>
                                 {{ $submission->id ?? '' }}
+                            </td>
+                            <td>
+                                @if($submission->absract_file)
+                                    <a href="{{ $submission->absract_file->getUrl() }}" target="_blank">
+                                        {{ trans('global.view_file') }}
+                                    </a>
+                                @endif
+                            </td>
+                            <td>
+                                @if($submission->submission_file)
+                                    <a href="{{ $submission->submission_file->getUrl() }}" target="_blank">
+                                        {{ trans('global.view_file') }}
+                                    </a>
+                                @endif
                             </td>
                             <td>
                                 @can('submission_show')

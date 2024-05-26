@@ -21,6 +21,10 @@ class UpdateImportantDateRequest extends FormRequest
                 'string',
                 'required',
             ],
+            'date' => [
+                'string',
+                'required',
+            ],
         ];
     }
 }

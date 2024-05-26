@@ -29,6 +29,9 @@
                             {{ trans('cruds.importantDate.fields.title') }}
                         </th>
                         <th>
+                            {{ trans('cruds.importantDate.fields.date') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -44,6 +47,9 @@
                             </td>
                             <td>
                                 {{ $importantDate->title ?? '' }}
+                            </td>
+                            <td>
+                                {{ $importantDate->date ?? '' }}
                             </td>
                             <td>
                                 @can('important_date_show')

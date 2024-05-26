@@ -26,11 +26,17 @@ class AbstructSubmission extends Model implements HasMedia
         'deleted_at',
     ];
 
+    public const TYPE_SELECT = [
+        'Abstract'   => 'Abstract',
+        'Full Paper' => 'Full Paper',
+    ];
+
     protected $fillable = [
         'name',
         'phone',
         'email',
         'address',
+        'type',
         'created_at',
         'updated_at',
         'deleted_at',

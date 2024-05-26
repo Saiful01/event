@@ -7,6 +7,7 @@ use App\Http\Controllers\Traits\MediaUploadingTrait;
 use App\Http\Requests\MassDestroyOrganizationCommitteeRequest;
 use App\Http\Requests\StoreOrganizationCommitteeRequest;
 use App\Http\Requests\UpdateOrganizationCommitteeRequest;
+use App\Models\CommitteeCategory;
 use App\Models\OrganizationCommittee;
 use Gate;
 use Illuminate\Http\Request;
@@ -21,7 +22,7 @@ class OrganizationCommitteeController extends Controller
     {
         abort_if(Gate::denies('organization_committee_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $organizationCommittees = OrganizationCommittee::with(['media'])->get();
+        $organizationCommittees = OrganizationCommittee::with(['category', 'media'])->get();
 
         return view('admin.organizationCommittees.index', compact('organizationCommittees'));
     }
@@ -30,7 +31,9 @@ class OrganizationCommitteeController extends Controller
     {
         abort_if(Gate::denies('organization_committee_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        return view('admin.organizationCommittees.create');
+        $categories = CommitteeCategory::pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+
+        return view('admin.organizationCommittees.create', compact('categories'));
     }
 
     public function store(StoreOrganizationCommitteeRequest $request)
@@ -52,7 +55,11 @@ class OrganizationCommitteeController extends Controller
     {
         abort_if(Gate::denies('organization_committee_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        return view('admin.organizationCommittees.edit', compact('organizationCommittee'));
+        $categories = CommitteeCategory::pluck('title', 'id')->prepend(trans('global.pleaseSelect'), '');
+
+        $organizationCommittee->load('category');
+
+        return view('admin.organizationCommittees.edit', compact('categories', 'organizationCommittee'));
     }
 
     public function update(UpdateOrganizationCommitteeRequest $request, OrganizationCommittee $organizationCommittee)
@@ -76,6 +83,8 @@ class OrganizationCommitteeController extends Controller
     public function show(OrganizationCommittee $organizationCommittee)
     {
         abort_if(Gate::denies('organization_committee_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
+        $organizationCommittee->load('category');
 
         return view('admin.organizationCommittees.show', compact('organizationCommittee'));
     }

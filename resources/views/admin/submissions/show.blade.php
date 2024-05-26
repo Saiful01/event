@@ -39,6 +39,30 @@
                             {!! $submission->full_paper !!}
                         </td>
                     </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.submission.fields.absract_file') }}
+                        </th>
+                        <td>
+                            @if($submission->absract_file)
+                                <a href="{{ $submission->absract_file->getUrl() }}" target="_blank">
+                                    {{ trans('global.view_file') }}
+                                </a>
+                            @endif
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.submission.fields.submission_file') }}
+                        </th>
+                        <td>
+                            @if($submission->submission_file)
+                                <a href="{{ $submission->submission_file->getUrl() }}" target="_blank">
+                                    {{ trans('global.view_file') }}
+                                </a>
+                            @endif
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             <div class="form-group">

@@ -21,7 +21,7 @@ class SubmissionController extends Controller
     {
         abort_if(Gate::denies('submission_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $submissions = Submission::all();
+        $submissions = Submission::with(['media'])->get();
 
         return view('admin.submissions.index', compact('submissions'));
     }
@@ -36,6 +36,14 @@ class SubmissionController extends Controller
     public function store(StoreSubmissionRequest $request)
     {
         $submission = Submission::create($request->all());
+
+        if ($request->input('absract_file', false)) {
+            $submission->addMedia(storage_path('tmp/uploads/' . basename($request->input('absract_file'))))->toMediaCollection('absract_file');
+        }
+
+        if ($request->input('submission_file', false)) {
+            $submission->addMedia(storage_path('tmp/uploads/' . basename($request->input('submission_file'))))->toMediaCollection('submission_file');
+        }
 
         if ($media = $request->input('ck-media', false)) {
             Media::whereIn('id', $media)->update(['model_id' => $submission->id]);
@@ -54,6 +62,28 @@ class SubmissionController extends Controller
     public function update(UpdateSubmissionRequest $request, Submission $submission)
     {
         $submission->update($request->all());
+
+        if ($request->input('absract_file', false)) {
+            if (! $submission->absract_file || $request->input('absract_file') !== $submission->absract_file->file_name) {
+                if ($submission->absract_file) {
+                    $submission->absract_file->delete();
+                }
+                $submission->addMedia(storage_path('tmp/uploads/' . basename($request->input('absract_file'))))->toMediaCollection('absract_file');
+            }
+        } elseif ($submission->absract_file) {
+            $submission->absract_file->delete();
+        }
+
+        if ($request->input('submission_file', false)) {
+            if (! $submission->submission_file || $request->input('submission_file') !== $submission->submission_file->file_name) {
+                if ($submission->submission_file) {
+                    $submission->submission_file->delete();
+                }
+                $submission->addMedia(storage_path('tmp/uploads/' . basename($request->input('submission_file'))))->toMediaCollection('submission_file');
+            }
+        } elseif ($submission->submission_file) {
+            $submission->submission_file->delete();
+        }
 
         return redirect()->route('admin.submissions.index');
     }

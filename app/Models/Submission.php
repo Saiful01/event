@@ -16,6 +16,11 @@ class Submission extends Model implements HasMedia
 
     public $table = 'submissions';
 
+    protected $appends = [
+        'absract_file',
+        'submission_file',
+    ];
+
     protected $dates = [
         'created_at',
         'updated_at',
@@ -39,5 +44,15 @@ class Submission extends Model implements HasMedia
     {
         $this->addMediaConversion('thumb')->fit('crop', 50, 50);
         $this->addMediaConversion('preview')->fit('crop', 120, 120);
+    }
+
+    public function getAbsractFileAttribute()
+    {
+        return $this->getMedia('absract_file')->last();
+    }
+
+    public function getSubmissionFileAttribute()
+    {
+        return $this->getMedia('submission_file')->last();
     }
 }

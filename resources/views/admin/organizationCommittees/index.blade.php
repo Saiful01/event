@@ -35,6 +35,9 @@
                             {{ trans('cruds.organizationCommittee.fields.image') }}
                         </th>
                         <th>
+                            {{ trans('cruds.organizationCommittee.fields.category') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -60,6 +63,9 @@
                                         <img src="{{ $organizationCommittee->image->getUrl('thumb') }}">
                                     </a>
                                 @endif
+                            </td>
+                            <td>
+                                {{ $organizationCommittee->category->title ?? '' }}
                             </td>
                             <td>
                                 @can('organization_committee_show')

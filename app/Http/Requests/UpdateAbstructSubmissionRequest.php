@@ -29,6 +29,9 @@ class UpdateAbstructSubmissionRequest extends FormRequest
                 'string',
                 'nullable',
             ],
+            'type' => [
+                'required',
+            ],
         ];
     }
 }

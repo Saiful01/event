@@ -11,7 +11,7 @@
             @csrf
             <div class="form-group">
                 <label for="welcome_message">{{ trans('cruds.aboutManagement.fields.welcome_message') }}</label>
-                <textarea class="form-control {{ $errors->has('welcome_message') ? 'is-invalid' : '' }}" name="welcome_message" id="welcome_message">{{ old('welcome_message') }}</textarea>
+                <textarea class="form-control ckeditor {{ $errors->has('welcome_message') ? 'is-invalid' : '' }}" name="welcome_message" id="welcome_message">{!! old('welcome_message') !!}</textarea>
                 @if($errors->has('welcome_message'))
                     <div class="invalid-feedback">
                         {{ $errors->first('welcome_message') }}
@@ -21,7 +21,7 @@
             </div>
             <div class="form-group">
                 <label for="about_text">{{ trans('cruds.aboutManagement.fields.about_text') }}</label>
-                <textarea class="form-control {{ $errors->has('about_text') ? 'is-invalid' : '' }}" name="about_text" id="about_text">{{ old('about_text') }}</textarea>
+                <textarea class="form-control ckeditor {{ $errors->has('about_text') ? 'is-invalid' : '' }}" name="about_text" id="about_text">{!! old('about_text') !!}</textarea>
                 @if($errors->has('about_text'))
                     <div class="invalid-feedback">
                         {{ $errors->first('about_text') }}
@@ -215,35 +215,41 @@
 
 </script>
 <script>
-    Dropzone.options.videoDropzone = {
+    var uploadedVideoMap = {}
+Dropzone.options.videoDropzone = {
     url: '{{ route('admin.about-managements.storeMedia') }}',
-    maxFilesize: 10, // MB
-    maxFiles: 1,
+    maxFilesize: 20, // MB
     addRemoveLinks: true,
     headers: {
       'X-CSRF-TOKEN': "{{ csrf_token() }}"
     },
     params: {
-      size: 10
+      size: 20
     },
     success: function (file, response) {
-      $('form').find('input[name="video"]').remove()
-      $('form').append('<input type="hidden" name="video" value="' + response.name + '">')
+      $('form').append('<input type="hidden" name="video[]" value="' + response.name + '">')
+      uploadedVideoMap[file.name] = response.name
     },
     removedfile: function (file) {
       file.previewElement.remove()
-      if (file.status !== 'error') {
-        $('form').find('input[name="video"]').remove()
-        this.options.maxFiles = this.options.maxFiles + 1
+      var name = ''
+      if (typeof file.file_name !== 'undefined') {
+        name = file.file_name
+      } else {
+        name = uploadedVideoMap[file.name]
       }
+      $('form').find('input[name="video[]"][value="' + name + '"]').remove()
     },
     init: function () {
 @if(isset($aboutManagement) && $aboutManagement->video)
-      var file = {!! json_encode($aboutManagement->video) !!}
-          this.options.addedfile.call(this, file)
-      file.previewElement.classList.add('dz-complete')
-      $('form').append('<input type="hidden" name="video" value="' + file.file_name + '">')
-      this.options.maxFiles = this.options.maxFiles - 1
+          var files =
+            {!! json_encode($aboutManagement->video) !!}
+              for (var i in files) {
+              var file = files[i]
+              this.options.addedfile.call(this, file)
+              file.previewElement.classList.add('dz-complete')
+              $('form').append('<input type="hidden" name="video[]" value="' + file.file_name + '">')
+            }
 @endif
     },
      error: function (file, response) {

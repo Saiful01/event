@@ -25,6 +25,10 @@ class StoreOrganizationCommitteeRequest extends FormRequest
                 'string',
                 'nullable',
             ],
+            'category_id' => [
+                'required',
+                'integer',
+            ],
         ];
     }
 }

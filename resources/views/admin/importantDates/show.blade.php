@@ -33,10 +33,10 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.importantDate.fields.details') }}
+                            {{ trans('cruds.importantDate.fields.date') }}
                         </th>
                         <td>
-                            {!! $importantDate->details !!}
+                            {{ $importantDate->date }}
                         </td>
                     </tr>
                 </tbody>

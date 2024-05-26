@@ -59,6 +59,14 @@
                             @endif
                         </td>
                     </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.organizationCommittee.fields.category') }}
+                        </th>
+                        <td>
+                            {{ $organizationCommittee->category->title ?? '' }}
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             <div class="form-group">

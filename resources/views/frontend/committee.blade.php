@@ -21,14 +21,21 @@
             </div>
         </div>
 
+
+        @foreach($commitee as $item)
         <!-- Team Start -->
         <div id="rs-team" class="rs-team style3 pt-120 md-pt-80">
             <div class="container">
+                <div class="sec-title text-center mb-60">
+                    <span class="sub-text">{{$item->title}}</span>
+
+                    <div class="heading-border-line"></div>
+                </div>
                 <div class="row">
 
-                    @if(count($commitee) > 0 )
 
-                        @foreach($commitee as $data)
+
+                        @foreach($item->categoryOrganizationCommittees as $data)
 
                         <div class="col-lg-4 col-md-6 mb-30">
                             <div class="team-item">
@@ -53,81 +60,13 @@
 
                         @endforeach
 
-
-                    @else
-
-                        <div class="col-lg-4 col-md-6 mb-30">
-                            <div class="team-item">
-                                <div class="team-img">
-                                    <a href="speaker-single.html"><img src="/assets/images/team/1.jpg" alt=""></a>
-                                </div>
-                                <div class="team-content">
-                                    <div class="team-info">
-                                        <div class="name">
-                                            <a href="speaker-single.html">Tom Cruise</a>
-                                        </div>
-                                        <span class="post">Graphic Designer</span>
-                                    </div>
-                                    <ul class="social-icon">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mb-30">
-                            <div class="team-item">
-                                <div class="team-img">
-                                    <a href="speaker-single.html"><img src="/assets/images/team/2.jpg" alt=""></a>
-                                </div>
-                                <div class="team-content">
-                                    <div class="team-info">
-                                        <div class="name">
-                                            <a href="speaker-single.html">Megan Fox</a>
-                                        </div>
-                                        <span class="post">Founder & CEO</span>
-                                    </div>
-                                    <ul class="social-icon">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mb-30">
-                            <div class="team-item">
-                                <div class="team-img">
-                                    <a href="speaker-single.html"><img src="/assets/images/team/3.jpg" alt=""></a>
-                                </div>
-                                <div class="team-content">
-                                    <div class="team-info">
-                                        <div class="name">
-                                            <a href="speaker-single.html">Will Smith</a>
-                                        </div>
-                                        <span class="post">Business Advisor</span>
-                                    </div>
-                                    <ul class="social-icon">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    @endif
-
                 </div>
             </div>
 
         </div>
         <!-- Team end -->
+
+        @endforeach
 
     </div>
     <!-- Main content End -->

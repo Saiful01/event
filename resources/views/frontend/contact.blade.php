@@ -48,8 +48,11 @@
                                 <div class="address-text">
                                     <h3 class="title"> Address</h3>
                                     <p class="services-txt">
-                                        55 Gerad Lane, <br>
-                                        NY 11201, USA
+                                        74/A, Green Road, Farmgate <br>
+                                        Dhaka-1205, Bangladesh
+
+
+
                                     </p>
                                 </div>
                             </div>

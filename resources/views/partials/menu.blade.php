@@ -88,7 +88,7 @@
             </li>
         @endcan
         @can('about_manage_access')
-            <li class="c-sidebar-nav-dropdown {{ request()->is("admin/about-managements*") ? "c-show" : "" }} {{ request()->is("admin/organization-committees*") ? "c-show" : "" }} {{ request()->is("admin/co-host-malaysia*") ? "c-show" : "" }}">
+            <li class="c-sidebar-nav-dropdown {{ request()->is("admin/about-managements*") ? "c-show" : "" }} {{ request()->is("admin/organization-committees*") ? "c-show" : "" }} {{ request()->is("admin/co-host-malaysia*") ? "c-show" : "" }} {{ request()->is("admin/committee-categories*") ? "c-show" : "" }}">
                 <a class="c-sidebar-nav-dropdown-toggle" href="#">
                     <i class="fa-fw fas fa-bars c-sidebar-nav-icon">
 
@@ -123,6 +123,16 @@
 
                                 </i>
                                 {{ trans('cruds.coHostMalaysium.title') }}
+                            </a>
+                        </li>
+                    @endcan
+                    @can('committee_category_access')
+                        <li class="c-sidebar-nav-item">
+                            <a href="{{ route("admin.committee-categories.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/committee-categories") || request()->is("admin/committee-categories/*") ? "c-active" : "" }}">
+                                <i class="fa-fw fas fa-th-list c-sidebar-nav-icon">
+
+                                </i>
+                                {{ trans('cruds.committeeCategory.title') }}
                             </a>
                         </li>
                     @endcan
@@ -208,6 +218,16 @@
 
                     </i>
                     {{ trans('cruds.importantDate.title') }}
+                </a>
+            </li>
+        @endcan
+        @can('announcement_access')
+            <li class="c-sidebar-nav-item">
+                <a href="{{ route("admin.announcements.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/announcements") || request()->is("admin/announcements/*") ? "c-active" : "" }}">
+                    <i class="fa-fw fas fa-bell c-sidebar-nav-icon">
+
+                    </i>
+                    {{ trans('cruds.announcement.title') }}
                 </a>
             </li>
         @endcan

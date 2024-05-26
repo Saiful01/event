@@ -26,6 +26,9 @@
                             {{ trans('cruds.abstructSubmission.fields.id') }}
                         </th>
                         <th>
+                            {{ trans('cruds.abstructSubmission.fields.type') }}
+                        </th>
+                        <th>
                             {{ trans('cruds.abstructSubmission.fields.name') }}
                         </th>
                         <th>
@@ -53,6 +56,9 @@
                             </td>
                             <td>
                                 {{ $abstructSubmission->id ?? '' }}
+                            </td>
+                            <td>
+                                {{ App\Models\AbstructSubmission::TYPE_SELECT[$abstructSubmission->type] ?? '' }}
                             </td>
                             <td>
                                 {{ $abstructSubmission->name ?? '' }}

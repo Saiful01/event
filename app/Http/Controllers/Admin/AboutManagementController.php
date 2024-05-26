@@ -41,8 +41,8 @@ class AboutManagementController extends Controller
             $aboutManagement->addMedia(storage_path('tmp/uploads/' . basename($request->input('image'))))->toMediaCollection('image');
         }
 
-        if ($request->input('video', false)) {
-            $aboutManagement->addMedia(storage_path('tmp/uploads/' . basename($request->input('video'))))->toMediaCollection('video');
+        foreach ($request->input('video', []) as $file) {
+            $aboutManagement->addMedia(storage_path('tmp/uploads/' . basename($file)))->toMediaCollection('video');
         }
 
         if ($media = $request->input('ck-media', false)) {
@@ -74,15 +74,18 @@ class AboutManagementController extends Controller
             $aboutManagement->image->delete();
         }
 
-        if ($request->input('video', false)) {
-            if (! $aboutManagement->video || $request->input('video') !== $aboutManagement->video->file_name) {
-                if ($aboutManagement->video) {
-                    $aboutManagement->video->delete();
+        if (count($aboutManagement->video) > 0) {
+            foreach ($aboutManagement->video as $media) {
+                if (! in_array($media->file_name, $request->input('video', []))) {
+                    $media->delete();
                 }
-                $aboutManagement->addMedia(storage_path('tmp/uploads/' . basename($request->input('video'))))->toMediaCollection('video');
             }
-        } elseif ($aboutManagement->video) {
-            $aboutManagement->video->delete();
+        }
+        $media = $aboutManagement->video->pluck('file_name')->toArray();
+        foreach ($request->input('video', []) as $file) {
+            if (count($media) === 0 || ! in_array($file, $media)) {
+                $aboutManagement->addMedia(storage_path('tmp/uploads/' . basename($file)))->toMediaCollection('video');
+            }
         }
 
         return redirect()->route('admin.about-managements.index');

@@ -26,12 +26,6 @@
                             {{ trans('cruds.aboutManagement.fields.id') }}
                         </th>
                         <th>
-                            {{ trans('cruds.aboutManagement.fields.welcome_message') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.aboutManagement.fields.about_text') }}
-                        </th>
-                        <th>
                             {{ trans('cruds.aboutManagement.fields.image') }}
                         </th>
                         <th>
@@ -52,12 +46,6 @@
                                 {{ $aboutManagement->id ?? '' }}
                             </td>
                             <td>
-                                {{ $aboutManagement->welcome_message ?? '' }}
-                            </td>
-                            <td>
-                                {{ $aboutManagement->about_text ?? '' }}
-                            </td>
-                            <td>
                                 @if($aboutManagement->image)
                                     <a href="{{ $aboutManagement->image->getUrl() }}" target="_blank" style="display: inline-block">
                                         <img src="{{ $aboutManagement->image->getUrl('thumb') }}">
@@ -65,11 +53,11 @@
                                 @endif
                             </td>
                             <td>
-                                @if($aboutManagement->video)
-                                    <a href="{{ $aboutManagement->video->getUrl() }}" target="_blank">
+                                @foreach($aboutManagement->video as $key => $media)
+                                    <a href="{{ $media->getUrl() }}" target="_blank">
                                         {{ trans('global.view_file') }}
                                     </a>
-                                @endif
+                                @endforeach
                             </td>
                             <td>
                                 @can('about_management_show')

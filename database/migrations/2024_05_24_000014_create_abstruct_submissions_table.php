@@ -10,6 +10,7 @@ class CreateAbstructSubmissionsTable extends Migration
     {
         Schema::create('abstruct_submissions', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('type');
             $table->string('name')->nullable();
             $table->string('phone')->nullable();
             $table->string('email')->nullable();

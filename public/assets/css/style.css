@@ -1585,7 +1585,7 @@ blockquote cite:before {
 .full-width-header .rs-header .expand-btn-inner ul .btn-quote .quote-button {
   font-size: 14px;
   background: rgba(0, 0, 0, 0) linear-gradient(160deg, #ff0066 0%, #d41872 80%, #a445b2 168%) repeat scroll 0% 0%;
-  padding: 9px 22px;
+  padding: 9px 14px;
   border-radius: 4px;
   color: #fff;
   font-weight: 600;
@@ -5266,7 +5266,7 @@ body .search-modal .close:hover {
   border-right: 1px solid rgba(0, 0, 0, 0.04);
 }
 .rs-our-sponsor.style1 .logo-item .grid-figure {
-  padding: 75px 75px 75px 75px;
+  padding: 25px 25px 25px 25px;
   border-style: solid;
   border-width: 0px 0px 0px 0px;
   border-color: #E9E9E99C;

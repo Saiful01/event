@@ -63,6 +63,6 @@ class AboutManagement extends Model implements HasMedia
 
     public function getVideoAttribute()
     {
-        return $this->getMedia('video')->last();
+        return $this->getMedia('video');
     }
 }

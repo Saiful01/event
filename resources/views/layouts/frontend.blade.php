@@ -34,8 +34,13 @@
     <!-- This stylesheet dynamically changed from style.less -->
     <!-- responsive css -->
     <link rel="stylesheet" type="text/css" href="/assets/css/responsive.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css" rel="stylesheet" />
 
     <style>
+        .form-group .required::after {
+            content: " *";
+            color: red;
+        }
         .rs-banner.main-home .content-wrap .prelements-heading .title-inner .title {
             font-size: 34px;
             font-weight: 900;
@@ -135,6 +140,10 @@
             display: none;
         }
         @media screen and (max-width: 450px) {
+
+            .list-ic li {
+                font-size: 13px;
+            }
             .number-div {
                 width: 60px;
             }
@@ -192,6 +201,16 @@
                 padding: 5px 10px 5px 10px;
             }
 
+
+            .full-width-header .rs-header.header-transparent {
+                position: fixed;
+
+            }
+            .full-width-header .rs-header .menu-area.sticky .logo-area a .sticky-logo {
+                display: block;
+                max-height: 35px;
+            }
+
         }
         @media screen and (min-width: 451px) {
             .et-mobile {
@@ -216,6 +235,8 @@
 
 </head>
 <body class="defult-home">
+@include('sweetalert::alert')
+
 
 <div class="offwrap"></div>
 
@@ -250,9 +271,10 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-12 col-sm-12 pl-45 md-pl-15">
                             <h3 class="footer-title">Address</h3>
-                            <div class="textwidget">2096 New Market, New<br> Road
-                                North Carolina, USA
+                            <div class="textwidget">74/A, Green Road, Farmgate <br>   Dhaka-1205, Bangladesh
                             </div>
+
+
                         </div>
                         <div class="col-lg-4 col-md-12 col-sm-12 md-mb-10 pl-90 md-pl-15">
                             <h3 class="footer-title">Call Us</h3>
@@ -357,6 +379,7 @@
 <script src="/assets/js/contact.form.js"></script>
 <!-- main js -->
 <script src="/assets/js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
 <script>
     // Set the date we're counting down to
     var countDownDate = new Date("Dec 31, 2024 23:59:59").getTime();
@@ -447,5 +470,6 @@
     }, 1000);
 
 </script>
+@yield('scripts')
 </body>
 </html>
