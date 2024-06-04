@@ -316,16 +316,20 @@
                     <div class="heading-border-line"></div>
                 </div>
                 <div class="row y-middle">
-                    @if(count($about->video)>0 )
+                    @if($about->link_1 )
 
-                        @foreach($about->video as $key => $media)
-                            <div class="col-lg-6 pr-55 md-pr-15 md-mb-50">
-                                <video width="100%" height="315" controls>
-                                    <source src="{{ $media->original_url }}" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                        @endforeach
+                        <div class="col-lg-6 pr-55 md-pr-15 md-mb-50">
+                            <iframe width="100%" height="315"
+                                    src="https://www.youtube.com/embed/{{$about->link_1}}">
+                            </iframe>
+                        </div>
+                        <div class="col-lg-6 pr-55 md-pr-15 md-mb-50">
+                            <iframe width="100%" height="315"
+                                    src="https://www.youtube.com/embed/{{$about->link_2}}">
+                            </iframe>
+                        </div>
+
+                     
 
 
                     @else

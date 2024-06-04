@@ -33,6 +33,8 @@ class AboutManagement extends Model implements HasMedia
         'about_the_conference',
         'scope_of_the_conference',
         'program_schedule',
+        'link_1',
+        'link_2',
         'created_at',
         'updated_at',
         'deleted_at',

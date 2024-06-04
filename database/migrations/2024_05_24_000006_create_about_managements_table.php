@@ -15,6 +15,8 @@ class CreateAboutManagementsTable extends Migration
             $table->longText('about_the_conference')->nullable();
             $table->longText('scope_of_the_conference')->nullable();
             $table->longText('program_schedule')->nullable();
+            $table->string('link_1')->nullable();
+            $table->string('link_2')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

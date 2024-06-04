@@ -71,6 +71,26 @@
                 <span class="help-block">{{ trans('cruds.aboutManagement.fields.image_helper') }}</span>
             </div>
             <div class="form-group">
+                <label for="name">Youtube Video link 1</label>
+                <input class="form-control {{ $errors->has('link_1') ? 'is-invalid' : '' }}" type="text" name="link_1" id="link_1" value="{{ old('link_1', '') }}">
+                @if($errors->has('link_1'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('link_1') }}
+                    </div>
+                @endif
+                <span class="help-block"></span>
+            </div>
+            <div class="form-group">
+                <label for="name">Youtube Video link 2</label>
+                <input class="form-control {{ $errors->has('link_2') ? 'is-invalid' : '' }}" type="text" name="link_2" id="link_2" value="{{ old('link_2', '') }}">
+                @if($errors->has('link_2'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('link_2') }}
+                    </div>
+                @endif
+                <span class="help-block"></span>
+            </div>
+        {{--    <div class="form-group">
                 <label for="video">{{ trans('cruds.aboutManagement.fields.video') }}</label>
                 <div class="needsclick dropzone {{ $errors->has('video') ? 'is-invalid' : '' }}" id="video-dropzone">
                 </div>
@@ -80,7 +100,7 @@
                     </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.aboutManagement.fields.video_helper') }}</span>
-            </div>
+            </div>--}}
             <div class="form-group">
                 <button class="btn btn-danger" type="submit">
                     {{ trans('global.save') }}

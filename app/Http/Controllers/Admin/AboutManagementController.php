@@ -35,6 +35,14 @@ class AboutManagementController extends Controller
 
     public function store(StoreAboutManagementRequest $request)
     {
+
+        $url1 = $request->input('link_1');
+        $url2 = $request->input('link_2');
+        $request['link_1'] = $this->getYouTubeVideoKey($url1);
+        $request['link_2'] = $this->getYouTubeVideoKey($url2);
+
+        //return $request->all();
+
         $aboutManagement = AboutManagement::create($request->all());
 
         if ($request->input('image', false)) {
@@ -50,6 +58,14 @@ class AboutManagementController extends Controller
         }
 
         return redirect()->route('admin.about-managements.index');
+    }
+
+    private function getYouTubeVideoKey($url)
+    {
+        $pattern = '%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i';
+        preg_match($pattern, $url, $matches);
+
+        return $matches[1] ?? null;
     }
 
     public function edit(AboutManagement $aboutManagement)
